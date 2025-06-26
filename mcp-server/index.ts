@@ -3,6 +3,8 @@ import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js"
 import { z } from "zod";
 import axios from 'axios';
 
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Create an MCP server
 const server = new McpServer({
@@ -103,7 +105,7 @@ server.registerTool(
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        "x-api-key": 'airxpressSp21X76DfcwedwOpBa98fDQ'
+                        "x-api-key": process.env.X_API_KEY
                     }
                 }
             );
