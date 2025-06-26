@@ -95,6 +95,9 @@ server.registerTool(
     },
     async ({ listing_id }) => {
         try {
+            
+            const apiKey = process.env.X_API_KEY;
+
             const payload = {
                 listing_id: listing_id
             };
@@ -105,7 +108,7 @@ server.registerTool(
                 {
                     headers: {
                         "Content-Type": "application/json",
-                        "x-api-key": process.env.X_API_KEY
+                        "x-api-key": apiKey
                     }
                 }
             );
