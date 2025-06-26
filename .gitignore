@@ -1,1 +1,5 @@
 .venv
+.env
+/mcp-server/dist/*
+/mcp-server/node_modules
+/multiple-tool-agents/__pycache__
